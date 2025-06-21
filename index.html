@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genetic Homeopathy - Holistic healing through personalized homeopathic treatments. Book your consultation today!">
+    <meta name="keywords" content="homeopathy, genetic homeopathy, holistic healing, natural remedies, alternative medicine">
+    <meta name="author" content="Genetic Homeopathy">
+    <title>Genetic Homeopathy - Holistic Healing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c7a2');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        /* Connect Section */
+        .connect {
+            padding: 4rem 2rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .connect h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .connect-link {
+            display: block;
+            padding: 1rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .connect-link:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2c3e50;
+                width: 100%;
+                padding: 1rem;
+                display: none;
+            }
+
+            .navbar .nav-links.active {
+                display: flex;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                color: #fff;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .connect-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Genetic Homeopathy</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Genetic Homeopathy</h1>
+            <p>Discover personalized holistic healing through our expert homeopathic treatments tailored to your unique needs.</p>
+            <a href="#contact" class="btn">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Personalized Homeopathy</h3>
+                <p>Tailored remedies based on your genetic and health profile for effective healing.</p>
+            </div>
+            <div class="service-card">
+                <h3>Chronic Condition Support</h3>
+                <p>Holistic solutions for managing chronic illnesses with natural remedies.</p>
+            </div>
+            <div class="service-card">
+                <h3>Wellness Consultations</h3>
+                <p>Comprehensive consultations to enhance your overall well-being.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Genetic Homeopathy, we believe in the power of natural healing. Our experienced practitioners combine traditional homeopathic principles with modern genetic insights to provide personalized care. We are dedicated to helping you achieve optimal health through safe, effective, and holistic treatments.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect" class="connect">
+        <h2>Connect With Us</h2>
+        <div class="connect-grid">
+            <a href="https://issuu.com/genetichomeo" target="_blank" class="connect-link">Issuu</a>
+            <a href="https://linktr.ee/genetichomeo" target="_blank" class="connect-link">Linktree</a>
+            <a href="https://www.tumblr.com/genetichomeo" target="_blank" class="connect-link">Tumblr</a>
+            <a href="https://genetichomeo.mystrikingly.com/" target="_blank" class="connect-link">Strikingly</a>
+            <a href="https://www.crunchbase.com/organization/genetichomeo" target="_blank" class="connect-link">Crunchbase</a>
+            <a href="https://www.cake.me/me/genetic-homeo" target="_blank" class="connect-link">Cake</a>
+            <a href="https://genetichomeo.wordpress.com/" target="_blank" class="connect-link">WordPress</a>
+            <a href="https://genetichomeo.blogspot.com/2025/06/about.html" target="_blank" class="connect-link">Blogger</a>
+            <a href="https://genetic-homeo.jimdosite.com/" target="_blank" class="connect-link">Jimdo</a>
+            <a href="https://genetichomeo.bravesites.com/" target="_blank" class="connect-link">Bravesites</a>
+            <a href="https://genetichomeo.weebly.com/" target="_blank" class="connect-link">Weebly</a>
+            <a href="https://sites.google.com/view/genetichomeo" target="_blank" class="connect-link">Google Sites</a>
+            <a href="https://form.jotform.com/genetichomeo/genetic-homeo" target="_blank" class="connect-link">Jotform</a>
+            <a href="https://vocal.media/authors/genetic-homeo" target="_blank" class="connect-link">Vocal</a>
+            <a href="https://triberr.com/genetichomeo" target="_blank" class="connect-link">Triberr</a>
+            <a href="https://www.openstreetmap.org/user/Genetic%20Homeo" target="_blank" class="connect-link">OpenStreetMap</a>
+            <a href="https://disqus.com/by/genetichomeo/" target="_blank" class="connect-link">Disqus</a>
+            <a href="https://wellfound.com/u/genetic-homeo" target="_blank" class="connect-link">Wellfound</a>
+            <a href="https://www.dwell.com/@genetichomeo" target="_blank" class="connect-link">Dwell</a>
+            <a href="https://www.producthunt.com/@dr_sheikh_abdullah" target="_blank" class="connect-link">Product Hunt</a>
+            <a href="https://hub.docker.com/u/genetichomeo" target="_blank" class="connect-link">Docker Hub</a>
+            <a href="https://genetic-homeo.webflow.io/" target="_blank" class="connect-link">Webflow</a>
+            <a href="https://www.xing.com/profile/Genetic_Homeo" target="_blank" class="connect-link">Xing</a>
+            <a href="https://infogram.com/genetic-homeo-1hmr6g89709dz2n" target="_blank" class="connect-link">Infogram</a>
+            <a href="https://www.last.fm/user/genetichomeo" target="_blank" class="connect-link">Last.fm</a>
+            <a href="https://codepen.io/genetichomeo/pen/wBaYbLN" target="_blank" class="connect-link">CodePen</a>
+            <a href="https://rebrand.ly/genetichomeo" target="_blank" class="connect-link">Rebrandly (Homeo)</a>
+            <a href="https://rebrand.ly/homeopathinfo" target="_blank" class="connect-link">Rebrandly (Info)</a>
+            <a href="https://www.behance.net/sheikhabdullah56" target="_blank" class="connect-link">Behance</a>
+            <a href="https://muckrack.com/sheikh-abdullah" target="_blank" class="connect-link">Muck Rack</a>
+            <a href="https://issuu.com/sheikhabdullahdhms" target="_blank" class="connect-link">Issuu (Sheikh)</a>
+            <a href="https://flipboard.com/@SheikhAbdul2025" target="_blank" class="connect-link">Flipboard</a>
+            <a href="https://linktr.ee/drsheikhabdullahdhms" target="_blank" class="connect-link">Linktree (Sheikh)</a>
+            <a href="https://foursquare.com/sheikha9815187" target="_blank" class="connect-link">Foursquare</a>
+            <a href="https://hubpages.com/@drsheikhabdullahdhms" target="_blank" class="connect-link">HubPages</a>
+            <a href="https://bn.quora.com/profile/Sheikh-Abdullah-67" target="_blank" class="connect-link">Quora</a>
+            <a href="https://dribbble.com/drsheikhabdullahdhms" target="_blank" class="connect-link">Dribbble</a>
+            <a href="https://gravatar.com/sheikhabdullahdhms" target="_blank" class="connect-link">Gravatar</a>
+            <a href="https://www.reddit.com/user/drsheikhabdullahdhms/" target="_blank" class="connect-link">Reddit</a>
+            <a href="https://soundcloud.com/sheikh-abdullah-89689130" target="_blank" class="connect-link">SoundCloud</a>
+            <a href="https://www.slideshare.net/admin585210" target="_blank" class="connect-link">SlideShare</a>
+            <a href="https://www.pinterest.com/genetichomeo" target="_blank" class="connect-link">Pinterest</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Genetic Homeopathy. All rights reserved.</p>
+        <p>Contact: info@genetichomeopathy.com | Phone: (123) 456-7890</p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
